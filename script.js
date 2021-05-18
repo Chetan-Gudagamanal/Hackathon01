@@ -28,7 +28,7 @@ submit.addEventListener("click",(event)=>{
 
             displayRepos(repoNamesList,userName,cloneUrls);
         }catch{
-            alert("Please check GitHub username / If correct try after sometime")
+            alert("Please Ensure GitHub username is correct / Otherwise, there might be no repositories / kindly try after sometime")
             console.log("Something went wrong, Pls check the UserName")
         }
         
@@ -95,7 +95,7 @@ let repositoryFiles=(event,userName,repo,cloneUrls)=>{
             let repoFilesList=filesInRepo.map(ele=>ele.name)
             displayFiles(repoFilesList,repo,cloneUrls)
         }catch{
-            alert("Something went wrong, Pls try after sometime")
+            alert("This Repository might be empty / If not pls try after sometime")
         }
     }
     filesFunction()
