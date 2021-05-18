@@ -1,0 +1,131 @@
+body{
+    width: 100%;
+}
+
+/* header part */
+.title{
+    text-decoration: underline;
+    color: rgb(196, 191, 191);
+}
+
+header{
+    background-color: #2c2c4b;
+    padding: 2em;
+}
+
+.header-title{
+    color: wheat;
+}
+
+/* Inner Section part */
+.content{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(rgb(205, 172, 236),rgb(54, 54, 43))
+}
+
+section{
+    width: 100%;
+}
+
+.userId{
+    padding: 5%;
+    text-shadow: 1px 1px #445677;
+}
+
+/* List of Repository column part */
+.repo{
+    text-align: center;
+    min-height: 50vh;
+    padding: 2%;
+    width: 100%;
+}
+
+
+.repo-list-head{
+    text-decoration: cyan;
+    font-size: 1.3em;
+    color: #000000;
+    border: 2px dotted black;
+    background-color: #b9a59c;
+}
+
+.repoList{
+    list-style: none;
+}
+.repoList li{
+    padding: 0.2rem;
+    text-align: center;
+    transition: all 0.5s;
+}
+.repoList li:hover{
+    transform: scale(1.1);
+}
+.button-info{
+    width: 100%;
+    font-size: 12px;
+    border-color: unset;
+    background-color: #2eb82e;
+}
+
+[name="active"]{
+    background-color: yellow;
+    width: 105%;
+}
+
+/* List of Files in Repo column part */
+.input-group{
+    align-self: center;
+    padding: 0px;
+}
+
+.cloneInput{
+    border: 1px solid black;
+    background-color: white;
+    font-size: 0.7em;
+    width: 80%;
+    border-radius: 5%;
+    padding: 0px;
+    color: black;
+}
+
+.btn-outline-secondary{
+    font-size: 0.6em;
+    background-color: rgb(32, 31, 31);
+    color: white;
+    padding: 0px;
+}
+
+#anchor{
+    font-size: 10px;
+    background-color: rgb(216, 252, 250);
+    color: #0b0bf7;
+    padding: 0.2rem;
+}
+.file-list-head{
+    text-decoration: cyan;
+    font-size: 1.3em;
+    color: #000000;
+    border: 2px dotted black;
+    background-color: #b9a59c;
+}
+.fileList{
+    /* float: right; */
+    text-align: center;
+    list-style: none;
+}
+.fileList li{
+    padding: 0.2rem;
+}
+.btn-warning{
+    width: 80%;
+    font-size: 12px;
+    background-color: rgb(225, 253, 65);
+}
+
+/* Footer Part */
+footer{
+    padding: 1.1rem;
+    font-size: 9px;
+    background-color: #1d1d1f;
+}
+

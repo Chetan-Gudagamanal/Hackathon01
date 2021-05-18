@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIT-Repos</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header part -->
+    <header>
+        <div class="container">
+            <h1 class="text-center title">Finding GitHub Repos and Files got Simplified.</h1>
+            <form class="was-validated">
+                <div class="mb-3">
+                <label for="userName" class="form-label header-title">GitHub Username:</label>
+                <input type="text" id="userName" class="form-control form-control-sm" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+                <div class="invalid-feedback">
+                    Please Enter UserName without any extra spaces.
+                </div>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit" id="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </header>
+    <!-- Inner-Section part -->
+    <section class="content">
+        <h4 class="text-start col-12 userId fw-bolder" id="githubUser">Submit Valid UserName to view Repositories</h4>
+        <div class="container repo row">
+            
+        </div>
+        
+    </section>
+    <!-- footer part -->
+    <footer>
+        <div class="container-lg footer row" style="color: white;">
+            <div class="zone col-6">
+                <h6 style="font-size: 10px;">Techs used</h6>
+                <p class="footerText">HTML, CSS, Bootstrap, JavaScript, DOM</p>
+            </div>
+            <div class="zone col-6">
+                <h6 style="font-size: 10px;">Content Disclaimer</h6>
+                <p class="footerText">This App has been developed as part of the Hackathon Event</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
