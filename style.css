@@ -32,6 +32,16 @@ section{
     text-shadow: 1px 1px #445677;
 }
 
+.searchField{
+    font-size: 12px;
+}
+
+#searchInput{
+    max-width: 400px; 
+    float: left;
+    font-size: 15px;
+}
+
 /* List of Repository column part */
 .repo{
     text-align: center;
