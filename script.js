@@ -8,6 +8,12 @@ submit.addEventListener("click",(event)=>{
     if(document.querySelector(".fileList")){
         document.querySelector(".fileList").remove()
     }
+    if(document.querySelector(".searchLabel")){
+        document.querySelector(".searchLabel").remove()
+    }
+    if(document.querySelector(".searchField")){
+        document.querySelector(".searchField").remove()
+    }
     document.getElementById("githubUser").innerText="Submit Valid UserName to view Repositories"
     let repoFunction = async()=>{
         try{
@@ -26,7 +32,8 @@ submit.addEventListener("click",(event)=>{
                 cloneUrls[element["name"]]=element["clone_url"]
             });
 
-            displayRepos(repoNamesList,userName,cloneUrls);
+            searchRepo(repoNamesList,userName,cloneUrls);
+            //displayRepos(repoNamesList,userName,cloneUrls);//replace with previous line to remove search functinality (if it dosen't work well).
         }catch{
             alert("Please Ensure GitHub username is correct / Otherwise, there might be no repositories / kindly try after sometime")
             console.log("Something went wrong, Pls check the UserName")
@@ -37,6 +44,49 @@ submit.addEventListener("click",(event)=>{
     event.preventDefault();
     
 })
+
+//Search Functionality
+let searchRepo=(repoNamesList,userName,cloneUrls)=>{
+    let myEle=document.querySelector("#searchInput");
+    let labelText=document.createElement("label")
+    labelText.setAttribute("class","form-label searchLabel")
+    labelText.innerText="Search Repo"
+    myEle.appendChild(labelText);
+    let searchInput=document.createElement("input")
+    searchInput.setAttribute("type","text");
+    searchInput.setAttribute("class","searchField form-control form-control-sm");
+    searchInput.addEventListener("input",()=>{
+        if(document.querySelector(".repoList")){
+            document.querySelector(".repoList").remove()
+        }
+        if(document.querySelector(".fileList")){
+            document.querySelector(".fileList").remove()
+        }
+        getFilteredNames(repoNamesList,userName,cloneUrls)
+    });
+    myEle.append(searchInput);
+    
+    getFilteredNames(repoNamesList,userName,cloneUrls)
+    
+    
+}
+
+let getFilteredNames=(repoNamesList,userName,cloneUrls)=>{
+    let searchInput=document.querySelector(".searchField");
+    if(searchInput.value ==""){
+        displayRepos(repoNamesList,userName,cloneUrls);
+    }
+    else{
+        let filteredNameList=[];
+        for (i of repoNamesList){
+            if(i.toLowerCase().includes(searchInput.value)){
+                filteredNameList.push(i)
+            }
+        }
+        displayRepos(filteredNameList,userName,cloneUrls);
+    }
+}
+
 
 //Displaying Repository names in WebPage
 let displayRepos=(repoNamesList,userName,cloneUrls)=>{
