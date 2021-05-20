@@ -79,7 +79,7 @@ let getFilteredNames=(repoNamesList,userName,cloneUrls)=>{
     else{
         let filteredNameList=[];
         for (i of repoNamesList){
-            if(i.toLowerCase().includes(searchInput.value)){
+            if(i.toLowerCase().includes(searchInput.value.toLowerCase())){
                 filteredNameList.push(i)
             }
         }
